@@ -103,7 +103,7 @@ class Projects extends Migration
             $table->foreign('currency')->references('id')->on('currencies')->onDelete('cascade');*/
         });
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('rol');
+            $table->integer('rol')->default(1);
             $table->softDeletes();
             //$table->foreign('rol')->references('id')->on('userRoles')->onDelete('cascade');
         });
