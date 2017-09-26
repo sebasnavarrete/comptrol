@@ -1,0 +1,193 @@
+<div class="ks-form ks-settings-tab-form ks-billing"> <!-- ks-uppercase ks-light -->
+  <h3 class="ks-main-form-header">Billing</h3>
+
+  <div class="card panel panel-default ks-information ks-light">
+    <h5 class="card-header">
+      <span class="ks-text">Payment method</span>
+      <a href="#" class="btn btn-primary-outline ks-light">Add New</a>
+    </h5>
+    <div class="card-block ks-payment-methods">
+      <div class="ks-payment-method">
+        <img class="ks-method" src="assets/img/payment/visa.png">
+        <span class="ks-number">**** **** **** 1234</span>
+        <span class="ks-expire">exp 02/2017</span>
+
+        <div class="ks-controls">
+          <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-pencil ks-icon"></span></button>
+          <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-trash-o ks-icon"></span></button>
+        </div>
+      </div>
+      <div class="ks-payment-method">
+        <img class="ks-method" src="assets/img/payment/ma.png">
+        <span class="ks-number">**** **** **** 1234</span>
+        <span class="ks-expire">exp 02/2017</span>
+
+        <div class="ks-controls">
+          <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-pencil ks-icon"></span></button>
+          <button type="button" class="btn btn-primary ks-light ks-no-text"><span class="la la-trash-o ks-icon"></span></button>
+        </div>
+      </div>
+      <div class="ks-manage-payment">
+        <div class="ks-manage-payment-header">New payment method</div>
+        <form>
+          <div class="form-group row">
+            <div class="col-lg-3">
+              <label>Card Number</label>
+              <input type="text" class="form-control" placeholder="0000-0000-0000-0000">
+            </div>
+            <div class="col-lg-9">
+                                                            <span class="ks-card-type ks-active">
+                                                                <img src="assets/img/payment/visa.png">
+                                                            </span>
+                                                            <span class="ks-card-type">
+                                                                <img src="assets/img/payment/ma.png">
+                                                            </span>
+                                                            <span class="ks-card-type">
+                                                                <img src="assets/img/payment/ms.png">
+                                                            </span>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-lg-3">
+                  <label>CVV <span class="la la-question-circle ks-text-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></span></label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="col-lg-3">
+                  <label>Exp. Month</label>
+                  <select class="form-control ks-selectpicker" appSelectable>
+                    <option value="">Month</option>
+                    <option value='01'>January (01)</option>
+                    <option value='02'>February (02)</option>
+                    <option value='03'>March (03)</option>
+                    <option value='04'>April (04)</option>
+                    <option value='05'>May (05)</option>
+                    <option value='06'>June (06)</option>
+                    <option value='07'>July (07)</option>
+                    <option value='08'>August (08)</option>
+                    <option value='09'>September (09)</option>
+                    <option value='10'>October (10)</option>
+                    <option value='11'>November (11)</option>
+                    <option value='12'>December (12)</option>
+                  </select>
+                </div>
+                <div class="col-lg-3">
+                  <label>Exp. Year</label>
+                  <select class="form-control ks-selectpicker" appSelectable>
+                    <option value="">Year</option>
+                    <option value='2017'>2017</option>
+                    <option value='2018'>2018</option>
+                    <option value='2019'>2019</option>
+                    <option value='2020'>2020</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary">Save card</button>
+            <a href="#" class="ks-cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+      <div class="ks-next-payment">
+        <div>
+          <span class="ks-bold">Next payment:</span> $8 on December 2016
+        </div>
+                                                <span class="ks-auto-renew">
+                                                    Auto-renew:
+
+                                                    <label class="ks-checkbox-slider ks-on-off ks-primary">
+                                                        <input type="checkbox" value="1">
+                                                        <span class="ks-indicator"></span>
+                                                        <span class="ks-on">On</span>
+                                                        <span class="ks-off">Off</span>
+                                                    </label>
+                                                </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ks-log-table">
+    <h3 class="ks-header ks-xs">
+      <span>Payment History</span>
+      <select class="ks-select-period ks-selectpicker" appSelectable>
+        <option>September, 2016</option>
+      </select>
+    </h3>
+
+    <table class="table ks-payment-history ks-no-main-row">
+      <thead>
+      <tr>
+        <th>Card</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Invoice</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td width="1">
+          <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+        </td>
+        <td>**** **** **** 1111</td>
+        <td>September 8, 2016</td>
+        <td class="ks-download">
+          <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td width="1">
+          <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+        </td>
+        <td>**** **** **** 1111</td>
+        <td>September 8, 2016</td>
+        <td class="ks-download">
+          <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td width="1">
+          <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+        </td>
+        <td>**** **** **** 1111</td>
+        <td>September 8, 2016</td>
+        <td class="ks-download">
+          <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td width="1">
+          <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+        </td>
+        <td>**** **** **** 1111</td>
+        <td>September 8, 2016</td>
+        <td class="ks-download">
+          <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td width="1">
+          <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+        </td>
+        <td>**** **** **** 1111</td>
+        <td>September 8, 2016</td>
+        <td class="ks-download">
+          <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td width="1">
+          <img class="ks-card-type" src="assets/img/payment/visa.png" width="58" height="38">
+        </td>
+        <td>**** **** **** 1111</td>
+        <td>September 8, 2016</td>
+        <td class="ks-download">
+          <a href="#"><span class="la la-file-pdf-o ks-icon"></span> Download</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

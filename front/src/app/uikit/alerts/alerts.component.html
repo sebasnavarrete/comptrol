@@ -1,0 +1,53 @@
+<div class="ks-page-header">
+  <section class="ks-title">
+    <h3>Default Alerts</h3>
+    <button class="btn btn-primary-outline ks-light ks-content-nav-toggle" data-block-toggle=".ks-content-nav > .ks-nav">Menu</button>
+  </section>
+</div>
+
+<div class="ks-page-content">
+  <div class="ks-page-content-body ks-content-nav">
+    <div class="ks-nav">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a routerLink="/uikit/alerts" routerLinkActive="ks-active" class="nav-link">
+            Default Alerts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/uikit/alerts/primary" routerLinkActive="ks-active" class="nav-link">
+            Primary Alerts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/uikit/alerts/info" routerLinkActive="ks-active" class="nav-link">
+            Info Alerts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/uikit/alerts/success" routerLinkActive="ks-active" class="nav-link">
+            Success Alerts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/uikit/alerts/warning" routerLinkActive="ks-active" class="nav-link">
+            Warning Alerts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/uikit/alerts/danger" routerLinkActive="ks-active" class="nav-link">
+            Danger Alerts
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ks-nav-body">
+      <div class="ks-nav-body-wrapper">
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

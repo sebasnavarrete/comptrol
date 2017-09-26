@@ -1,0 +1,289 @@
+<div class="ks-page-header">
+  <section class="ks-title">
+    <h3>Form Tags &amp; Autocomplete</h3>
+  </section>
+</div>
+
+<div class="ks-page-content">
+  <div class="ks-page-content-body">
+    <div class="ks-nav-body-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-6">
+            <h3>Autocomplete</h3>
+
+            <h4>Datalist</h4>
+
+            <div class="row">
+              <div class="col-xl-8">
+                <p>Using data from <code>&lt;datalist&gt;</code> as a suggestion (the standard behavior).</p>
+
+                <div class="form-group">
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-min-length='1'
+                         list='ks-flexdatalist-basic-languages'
+                         name='language' appAutoComplete>
+                  <datalist id="ks-flexdatalist-basic-languages">
+                    <option value="PHP">PHP</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Cobol">Cobol</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="FORTRAN">FORTRAN</option>
+                    <option value="Lisp">Lisp</option>
+                    <option value="Swift">Swift</option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <p>Multiple options from <code>&lt;datalist&gt;</code> (Use comma to set and separate values)</p>
+
+                <div class="form-group">
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-min-length='1'
+                         multiple='multiple'
+                         list='ks-flexdatalist-multiple-languages'
+                         name='language' appAutoComplete>
+                  <datalist id="ks-flexdatalist-multiple-languages">
+                    <option value="PHP">PHP</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Cobol">Cobol</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="FORTRAN">FORTRAN</option>
+                    <option value="Lisp">Lisp</option>
+                    <option value="Swift">Swift</option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <p>Force the selection of an option from <code>&lt;datalist&gt;</code></p>
+
+                <div class="form-group">
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-min-length='1'
+                         data-selection-required='true'
+                         value="PHP"
+                         list='ks-flexdatalist-force-selection-languages'
+                         name='language' appAutoComplete>
+                  <datalist id="ks-flexdatalist-force-selection-languages">
+                    <option value="PHP">PHP</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Cobol">Cobol</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="FORTRAN">FORTRAN</option>
+                    <option value="Lisp">Lisp</option>
+                    <option value="Swift">Swift</option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <p>Multiple options from <code>&lt;datalist&gt;</code> (selection required)</p>
+
+                <div class="form-group">
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-min-length='1'
+                         multiple
+                         data-selection-required='1'
+                         list='ks-flexdatalist-multiple-options-languages'
+                         name='language' appAutoComplete>
+                  <datalist id="ks-flexdatalist-multiple-options-languages">
+                    <option value="PHP">PHP</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Cobol">Cobol</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Pascal">Pascal</option>
+                    <option value="FORTRAN">FORTRAN</option>
+                    <option value="Lisp">Lisp</option>
+                    <option value="Swift">Swift</option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+
+            <h4>Data from remote file</h4>
+
+            <div class="row">
+              <div class="col-xl-8">
+                <p>Load data from file <code>countries.json</code>.</p>
+
+                <p>
+                  Like with <code>&lt;datalist&gt;</code> behavior, show the results as a suggestion.<br>
+                  Please note in the HTML that in order to search for value(s) property(ies) in a JSON,
+                  we set the option <code>searchIn</code> to name that matches the property for country name in JSON.
+                </p>
+
+                <div>
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-data='../../data/countries.json'
+                         data-search-in='name'
+                         name='language' appAutoComplete>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <p>... with multiple values:</p>
+
+                <div>
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-data='../../data/countries.json'
+                         data-search-in='name'
+                         multiple
+                         name='language' appAutoComplete>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <p>Now with the option <code>selectionRequired</code> to <code>true</code>:</p>
+
+                <div>
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-data='../../data/countries.json'
+                         data-search-in='name'
+                         data-selection-required='true'
+                         data-min-length='1'
+                         name='language' appAutoComplete>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <p>
+                  Let's add some visibleProperties to results.<br>
+                  Since we are searching for country's name, <code>'name'</code> is automatically an visibleProperties, but to add more,
+                  we simply set <code>visibleProperties</code> with <code>["name","capital","continent"]</code>.
+                </p>
+
+                <div>
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-data='../../data/countries.json'
+                         data-search-in='name'
+                         data-selection-required='true'
+                         data-visible-properties='["name","capital","continent"]'
+                         data-min-length='1'
+                         name='language' appAutoComplete>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>Show all results on focus</h4>
+                <p>
+                  Just set <code>minLength</code> to <code>0</code> and on focus, it will show all results.
+                </p>
+
+                <div>
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-data='../../data/countries.json'
+                         data-search-in='name'
+                         data-selection-required='true'
+                         data-value-property='*'
+                         data-min-length='0'
+                         data-visible-properties='["name","capital","continent"]'
+                         name='language' appAutoComplete>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>Groups</h4>
+
+                <div>
+                  <input type='text'
+                         placeholder='Programming language name'
+                         class='flexdatalist form-control'
+                         data-data='../../data/countries.json'
+                         data-search-in='name'
+                         data-selection-required='true'
+                         data-group-by='continent'
+                         data-value-property='iso2'
+                         data-text-property='{capital}, {name}, {continent}'
+                         data-search-contain='false'
+                         data-focus-first-result='true'
+                         data-visible-properties='["name","capital","continent"]'
+                         name='language' appAutoComplete>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <h3>Tags</h3>
+
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>Basic Initialization</h4>
+                <p>Create elegant taggable fields with copy/paste and keyboard support.</p>
+                <input type="text" class="form-control" id="ks-token-field-basic" value="" appSelectTags>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>Predefined Values</h4>
+                <input type="text" class="form-control" id="ks-token-field-predefined-values" value="red,green,blue" appSelectTags>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>Placeholder</h4>
+                <input type="text" class="form-control" id="ks-token-field-predefined-placeholder" value="red,green,blue" placeholder="Type something and hit enter" appSelectTags>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>Autocomplete</h4>
+                <input type="text" class="form-control" id="ks-token-field-autocomplete" value="red,green,blue" placeholder="Type something and hit enter" appSelectTags [autocomplete]="'true'" [localData]="selectTagsLocalData">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>Disabled</h4>
+                <input type="text" class="form-control" id="ks-token-field-disabled" value="red,green,blue" disabled appSelectTags>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-8">
+                <h4>RTL Support</h4>
+                <input type="text" class="form-control rtl" id="ks-token-field-rtl-support" value="red,green,blue" style="direction:rtl" appSelectTags>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
