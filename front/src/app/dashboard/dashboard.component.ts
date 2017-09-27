@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Restangular} from 'ngx-restangular';
 
 declare var c3: any;
 declare var Maplace: any;
@@ -18,10 +19,12 @@ declare var Noty: any;
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private restangular: Restangular) { }
 
   ngOnInit() {
-
+    this.restangular.all('projects').get().subscribe(projects => {
+      console.log(projects);
+    });
   }
 
   ngAfterViewInit() {
